@@ -6,16 +6,16 @@
                 <a href="#" class="card-action card-action-dismiss" data-card-dismiss=""></a>
             </div>
 
-            <h2 class="card-title">Form Ubah Status Peraturan</h2>
+            <h2 class="card-title">Form Ubah Kategori Peraturan</h2>
         </header>
         <div class="card-body" style="display: block;">
             <form wire:submit.prevent="update" class="form-horizontal form-bordered">
                 
                 <div class="form-group row">
-                    <label class="col-lg-3 control-label text-lg-right pt-2" for="inputRounded">Status peraturan</label>
+                    <label class="col-lg-3 control-label text-lg-right pt-2" for="inputRounded">Kategori peraturan</label>
                     <div class="col-lg-6">
-                        <input type="hidden" wire:model="status_id">
-                        <input wire:model="status_name" type="text" class="form-control input-rounded" autofocus>
+                        <input type="hidden" wire:model="kategori_id">
+                        <input wire:model="kategori_name" type="text" class="form-control input-rounded" autofocus>
                     </div>
                 </div>
                 

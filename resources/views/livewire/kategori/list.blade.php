@@ -8,38 +8,38 @@
                         <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
                     </div>
 
-                    <h2 class="card-title">List Peraturan dan Perundangan</h2>
+                    <div>
+                        @if(session()->has('message'))
+                        <div class="alert alert-success alert-dismissible fade show">{{ session('message') }}</div>
+                        @endif
+                    </div>
+
+                    <h2 class="card-title">List Kategori Peraturan</h2>
                 </header>
+                
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <a href="{{ 'produk-add' }}" class="btn btn-success">Tambah <i class="fa fa-plus"></i></a>
+                                <a href="{{ 'kategori-add' }}" class="btn btn-primary">Tambah <i class="fa fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
                     <table class="table table-bordered table-striped mb-0" id="datatable-tabletools">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>JENIS</th>
-                                <th>JUDUL</th>
-                                <th>TAHUN</th>
-                                <th>STATUS</th>
+                                <th>NO</th>
+                                <th>KATEGORI PERATURAN</th>
                                 <th>AKSI</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($produks as $produk)
+                            @foreach ($kategori as $k)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $produk->jenis->nama }}</td>
-                                <td>{{ $produk->judul }}</td>
-                                <td>{{ $produk->tahun }}</td>
-                                <td>{{ $produk->status_akhir }}</td>
+                                <td>{{ $k->kategori_name }}</td>
                                 <td>
-                                    <a href="#" class="text-decoration-none"><span><i class="fa fa-pencil" style="color: #3399ff;" title="Edit"></i></span></a>
-                                    <button class="btn btn-outline" onclick="return confirm('Apakah yakin akan dihapus ?')"><span><i class="fa fa-trash" style="color: #ef5350;" title="Hapus"></i></span></button>
+                                    <a href="{{ 'kategori-change/'.$k->id }}" class="text-decoration-none"><span><i class="fa fa-pencil" style="color: #3399ff;" title="Edit"></i></span></a>
                                 </td>
                             </tr>
                             @endforeach

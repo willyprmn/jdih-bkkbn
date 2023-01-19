@@ -2,7 +2,10 @@
 
     @if(in_array(request()->route()->getName(), ['dashboard', 'profile', 'profile-example', 'users', 'bootstrap-tables', 'transactions',
     'buttons',
-    'forms', 'modals', 'notifications', 'typography', 'produk-list', 'produk-add']))
+    'forms', 'modals', 'notifications', 'typography',
+    'status-list', 'status-add', 'status-change',
+    'kategori-list', 'kategori-add', 'kategori-change',
+    'dokumen-list', 'dokumen-add', 'dokumen-change', 'dokumen-drop']))
 
     {{-- Nav --}}
     @include('layouts.nav')

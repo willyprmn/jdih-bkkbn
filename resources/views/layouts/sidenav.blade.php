@@ -29,20 +29,20 @@
                             </a>
                             <ul class="nav nav-children">
                                 <li>
-                                    <a class="nav-link" href="ui-elements-loading-overlay.html">
-                                        Kategori
+                                    <a class="nav-link" href="{{ 'kategori-list' }}">
+                                        Kategori Peraturan
                                     </a>
                                 </li>
                                 <li>
                                     <a class="nav-link" href="{{ 'status-list' }}">
-                                        Status
+                                        Status Peraturan
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
                         <li>
-                            <a class="nav-link" href="{{'produk-list'}}">
+                            <a class="nav-link" href="{{ 'dokumen-list' }}">
                                 <i class="fa fa-folder" aria-hidden="true"></i>
                                 <span>Dokumen </span>
                             </a>

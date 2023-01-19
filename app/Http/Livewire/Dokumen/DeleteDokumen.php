@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Livewire\Produk;
+namespace App\Http\Livewire\Dokumen;
 
 use Livewire\Component;
 
-class Delete extends Component
+class DeleteDokumen extends Component
 {
     public function render()
     {

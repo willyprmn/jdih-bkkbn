@@ -29,6 +29,17 @@ use App\Http\Livewire\Users;
 use App\Http\Livewire\Produk\ListProduk;
 use App\Http\Livewire\Produk\CreateProduk;
 
+use App\Http\Livewire\Status\ListStatus;
+use App\Http\Livewire\Status\CreateStatus;
+use App\Http\Livewire\Status\UpdateStatus;
+use App\Http\Livewire\Kategori\ListKategori;
+use App\Http\Livewire\Kategori\CreateKategori;
+use App\Http\Livewire\Kategori\UpdateKategori;
+use App\Http\Livewire\Dokumen\ListDokumen;
+use App\Http\Livewire\Dokumen\CreateDokumen;
+use App\Http\Livewire\Dokumen\UpdateDokumen;
+use App\Http\Livewire\Dokumen\DeleteDokumen;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,8 +67,18 @@ Route::get('/500', Err500::class)->name('500');
 Route::get('/upgrade-to-pro', UpgradeToPro::class)->name('upgrade-to-pro');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/produk-list', ListProduk::class)->name('produk-list');
-    Route::get('/produk-add', CreateProduk::class)->name('produk-add');
+    Route::get('/status-list', ListStatus::class)->name('status-list');
+    Route::get('/status-add', CreateStatus::class)->name('status-add');
+    Route::get('/status-change/{id}', UpdateStatus::class)->name('status-change');
+
+    Route::get('/kategori-list', ListKategori::class)->name('kategori-list');
+    Route::get('/kategori-add', CreateKategori::class)->name('kategori-add');
+    Route::get('/kategori-change/{id}', UpdateKategori::class)->name('kategori-change');
+
+    Route::get('/dokumen-list', ListDokumen::class)->name('dokumen-list');
+    Route::get('/dokumen-add', CreateDokumen::class)->name('dokumen-add');
+    Route::get('/dokumen-change/{id}', UpdateDokumen::class)->name('dokumen-change');
+    Route::get('/dokumen-drop/{id}', DeleteDokumen::class)->name('dokumen-drop');
 
 
     Route::get('/profile', Profile::class)->name('profile');

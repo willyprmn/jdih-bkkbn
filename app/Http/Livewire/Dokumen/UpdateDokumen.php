@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Livewire\Produk;
+namespace App\Http\Livewire\Dokumen;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use App\Models\Produk;
+use App\Models\Dokumen;
 use App\Models\Jenis;
 
-class CreateProduk extends Component
+class UpdateDokumen extends Component
 {
     use WithFileUploads;
 
